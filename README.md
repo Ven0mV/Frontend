@@ -36,7 +36,7 @@ Responsive
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-[Bataleon](https://eu.bataleon.com)
+[Bataleon.eu](https://eu.bataleon.com)
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Bataleon home\
