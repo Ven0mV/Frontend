@@ -39,12 +39,12 @@ Responsive
 [Bataleon](https://eu.bataleon.com)
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-Bataleon home
-<img src="images/bataleon_home.jpg" width="375px" alt="omschrijving van de pagina">
+Bataleon home /
+<img src="images/bataleon_home.jpg" width="375px" alt="Bataleon homepage">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
-<img src="images/bataleon_tech.jpg" width="375px" alt="omschrijving van de pagina">
+hier de naam van de pagina /
+<img src="images/bataleon_tech.jpg" width="375px" alt="Bataleon tech">
  
 </details>
 
@@ -55,11 +55,13 @@ hier de naam van de pagina
 <details>
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
-### de hele pagina: 
-<img src="images/homeFullsmall.png" width="375px" alt="breakdown van de hele pagina">
+### de hele pagina:
+Bataleon home full /
+<img src="images/homeFullsmall.png" width="375px" alt="Screenshot gehele homepagina">
 
-### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+### dynamisch deel (bijv menu):
+Dynamisch onderdeel /
+<img src="images/bataleon_dynamic.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
