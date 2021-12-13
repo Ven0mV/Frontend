@@ -9,106 +9,133 @@
 	<title>Bataleon</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/bataleon_logo_round.svg">
 </head>
 
-<body>
-
+<body class="bodyHome">
 	<header>
-		<p>Bataleon</p>
-		<nav>
-			<ul>
-				<li><a href="#">Shop</a></li>
-				<li><a href="#">Technology™</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<main>
-
-		<section>
-			<h1>Ride the future</h1>
-			<div class="video-container">
-			<!--<iframe width="100%" height="315" src="https://www.youtube.com/embed/TZ85HlQvhUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+		<div id="overlay">
+			<a href="index.html">Home</a>
+			<a href="tech.html">Technology™</a>
+			<a href="#">3D</a>
+			<a href="#">Contact</a>
+		</div>
+		<div class="nav">
+			<div class="logo">Bataleon™</div>
+			<div id="hamburger">
+			<div></div>
+			<svg class="ham ham3" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+				<path
+					class="line top"
+					d="m 70,33 h -40 c -11.092231,0 11.883874,13.496726 -3.420361,12.956839 -0.962502,-2.089471 -2.222071,-3.282996 -4.545687,-3.282996 -2.323616,0 -5.113897,2.622752 -5.113897,7.071068 0,4.448316 2.080609,7.007933 5.555839,7.007933 2.401943,0 2.96769,-1.283974 4.166879,-3.282995 2.209342,0.273823 4.031294,1.642466 5.857227,-0.252538 v -13.005715 16.288404 h 7.653568" />
+				<path
+					class="line middle"
+					d="m 70,50 h -40 c -5.6862,0 -8.534259,5.373483 -8.534259,11.551069 0,7.187738 3.499166,10.922274 13.131984,10.922274 11.021777,0 7.022787,-15.773343 15.531095,-15.773343 3.268142,0 5.177031,-2.159429 5.177031,-6.7 0,-4.540571 -1.766442,-7.33533 -5.087851,-7.326157 -3.321409,0.0092 -5.771288,2.789632 -5.771288,7.326157 0,4.536525 2.478983,6.805271 5.771288,6.7" />
+				<path
+					class="line bottom"
+					d="m 70,67 h -40 c 0,0 -3.680675,0.737051 -3.660714,-3.517857 0.02541,-5.415597 3.391687,-10.357143 10.982142,-10.357143 4.048418,0 17.88928,0.178572 23.482143,0.178572 0,2.563604 2.451177,3.403635 4.642857,3.392857 2.19168,-0.01078 4.373905,-1.369814 4.375,-3.392857 0.0011,-2.023043 -1.924401,-2.589191 -4.553571,-4.107143 -2.62917,-1.517952 -4.196429,-1.799562 -4.196429,-3.660714 0,-1.861153 2.442181,-3.118811 4.196429,-3.035715 1.754248,0.0831 4.375,0.890841 4.375,3.125 2.628634,0 6.160714,0.267857 6.160714,0.267857 l -0.178571,-2.946428 10.178571,0 -10.178571,0 v 6.696428 l 8.928571,0 -8.928571,0 v 7.142858 l 10.178571,0 -10.178571,0" />
+			</svg>
 			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section>
+			<video src="images/bataleon_video.mp4" autoplay mute loop></video>
 		</section>
 
 		<section>
 			<ul>
 				<li>
-					<img src="" alt="snowboard evil twin">
+					<img src="images/bataleon-whatever-mens-snowboard-2021-2022_5334c42d-a7e3-4540-8ef7-eec9005acae6_1024x1024.jpg" alt="mewsnowboard evil twin">
 					<h3>Evil twin</h3>
 					<p>$549,95</p>
 				</li>
 				<li>
-					<img src="" alt="bindings astro">
-					<h3>Astro</h3>
-					<p>$329,95</p>
+					<img src="images/bataleon-atom-bindings-2021-2022-mens-snowboard-bindings-black-45-back_48b4f00a-e74e-4999-86f2-87a797d1dca1_1024x1024.jpg" alt="bindins atom">
+					<h3>Atom</h3>
+					<p>$369,95</p>
 				</li>
 				<li>
-					<img src="" alt="snow proof hoodie">
+					<img src="images/bataleon-apparel-2021-2022-snowproof-hoodie-black-front_bb63d1bc-f977-4a23-a7bf-9354d9b6ca40_1024x1024.jpg" alt="snow proof hoodie">
 					<h3>Snow proof hoodie</h3>
 					<p>$99,95</p>
 				</li>
 				<li>
-					<img src="" alt="snowboard feelbetter">
-					<h3>Feelbetter</h3>
-					<p>$449,95</p>
+					<img src="images/bataleon-magic-carpet-mens-snowboard-2021-2022_7505df75-b483-47d1-9710-fce89d5c954c_1024x1024.jpg" alt="snowboard magic carpet">
+					<h3>Magic carpet</h3>
+					<p>$599,95</p>
 				</li>
 			</ul>
 		</section>
 
 		<section>
-			<ul>
-				<li>
+			<ol>
+				<li id="men-snowboard">
 					<h2>Mens Snowboards</h2>
-					<img src="" alt="Snowboards men">
+					<img src="images/menboard375.png" alt="Snowboards men">
 				</li>
-				<li>
+				<li id="woman-snowboard">
 					<h2>Womens Snowboards</h2>
-					<img src="" alt="Snowboards woman">
+					<img src="images/testwoman.png" alt="Snowboards woman">
 				</li>
-				<li>
+				<li id="shapes">
 					<h2>3D Shapes</h2>
-					<img src="" alt="3D tech">
+					<img src="images/shapes720.png" alt="3D tech">
 				</li>
-				<li>
+				<li id="bindings">
 					<h2>Bindings</h2>
-					<img src="" alt="Snowboard bindings">
+					<img src="images/atom812.png" alt="Snowboard bindings">
 				</li>
-				<li>
+				<li id="apparel">
 					<h2>Apparel</h2>
-					<img src="" alt="Apparel">
+					<img src="images/apparel_test.png" alt="Apparel">
 				</li>
-				<li>
+				<li id="travel">
 					<h2>Travel</h2>
-					<img src="" alt="Travel items">
+					<img src="images/travel_image.jpg" alt="Travel items">
 				</li>
-			</ul>
+			</ol>
 		</section>
+	</main>
 
 	<footer>
-
 		<section>
 			<h3>About Bataleon</h3>
 			<p> For more than 18 years, Bataleon has led the industry in 3D shape technology. We’ve perfected our patented Triple Base Technology™, producing boards with traditional camber and lifted contact points, making snowboarding more enjoyable for all.</p>
 		</section>
 
 		<section>
-			<a href="">Terms of service</a><a href="">Refund policy</a><a href="">Shipping delivery</a><a href="">Returns</a><a href="">Contact us</a><a href="">FAQ</a>
-			<a href="">Refund policy</a><a href="">Privacy policy</a><a href="">Terms of service</a>
-			<img src="" alt="instagram icon">
-			<img src="" alt="facebook icon">
-		</section>
-
-		<section>
-
+			<div>
+				<ul>
+					<li><a href="#">Terms of service</a></li>
+					<li><a href="#">Refund policy</a></li>
+					<li><a href="#">Shipping delivery</a></li>
+					<li><a href="#">Returns</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li><a href="#">Contact us</a></li>
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</div>
+			<div>
+				<p>Refund policy | Privacy policy | Terms of service</p>
+			</div>
+			<div>
+				<svg class="instaIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+			</div>
+			<div>
+				<p>VenomV | 2021</p>
+			</div>
 		</section>
 	</footer>
+	<audio id="audio" src="assets/beat5brampremaster.wav"></audio>
+	<img id='playSong' src="images/cursemark.png">
 
-	</main>
 
 	<script src="scripts/script.js"></script>
 </body>
 	
 </html>
+<!--<div>Icons made by <a href="https://www.flaticon.com/authors/edtim" title="edt.im">edt.im</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
