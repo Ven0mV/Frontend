@@ -62,7 +62,7 @@ Dynamisch onderdeel\
 <img src="images/dynamic1.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dynamischdeel2 width="375px" alt="breakdown van nog een dynamisch deel">
+<img src="images/dynamischdeel2" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -189,9 +189,9 @@ Ik kon niet veel laten zien aan Vasilis in ons eerste gesprek. Mijn upload naar 
 
 ### Screenshot(s)
 
-<img src="images/Screenshot1.png "width="375px" alt="screenshot1">
-<img src="images/Screenshot2.png "width="375px" alt="screenshot2">
-<img src="images/Screenshot3.png "width="375px" alt="screenshot3">
+<img src="images/Screenshot1.png" width="375px" alt="screenshot1">
+<img src="images/Screenshot2.png" width="375px" alt="screenshot2">
+<img src="images/Screenshot3.png" width="375px" alt="screenshot3">
 
 </details>
 
