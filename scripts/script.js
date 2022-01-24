@@ -36,4 +36,4 @@ function togglePlay() {
   }
 }
 
-playSong.addEventListener('click', togglePlay);
+playSong.addEventListener('click', togglePlay); 
