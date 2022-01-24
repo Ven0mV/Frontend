@@ -15,14 +15,34 @@ algemeen
   --textcolor: black;
   --footercolor: grey;
   --mainfont: Arial, Helvetica, sans-serif;
+  --backgroundcolor: white;
+  --navcolor: yellow;
   --altbcolor1: rgb(237, 235, 226);
   --altbcolor2: rgb(216, 214, 204);
   --altbcolor3: rgb(237, 234, 225);
   --altbcolor4: rgb(237, 235, 228);
 }
 
+@media (prefers-color-scheme : dark ) {
+  :root {
+    --hcolor: rgb(211, 211, 211);
+    --textcolor: rgb(187, 187, 187);
+    --footercolor: #313e50;
+    --mainfont: Arial, Helvetica, sans-serif;
+    --backgroundcolor: #0a2941;
+    --backgroundcolordark: rgba(237, 235, 226, 0.50);
+    --navcolor: #141E61;
+    --altbcolor1: #0f283b;
+    --altbcolor2: #082032;
+    --altbcolor3: #061825;
+    --altbcolor4: #071927;
+  }
+}
+
+
 html {
   scroll-behavior: smooth;
+  background-color: var(--backgroundcolor);
 }
 
 body {
@@ -32,7 +52,7 @@ body {
 }
 
 header {
-  background-color: yellow;
+  background-color: var(--navcolor);
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
@@ -58,18 +78,15 @@ p {
   color: var(--textcolor);
 }
 
+
 /********************************
 Hamburger menu 
 ********************************/
 
-.logo,
-.content {
-  color: black;
-}
 
 .nav {
   width: 100%;
-  background-color:yellow;
+  background-color:var(--navcolor);;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,6 +99,7 @@ Hamburger menu
 #hamburger {
   margin: 0em 0em 0em 2em;
   font-family: var(--mainfont);
+  color: var(--hcolor);
   font-weight: bolder;
   font-size: 1.5em;
 }
@@ -123,7 +141,7 @@ Hamburger menu
   position: fixed;
   width: 100%;
   min-height: 100%;
-  background-color: yellow;
+  background-color: var(--navcolor);
   z-index: 2;
   transform: translateY(-100%);
   transition: all 0.5s ease-in-out;
@@ -141,7 +159,7 @@ Hamburger menu
   margin: 1em;
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: var(--textcolor);
   font-size: 2em;
   transition: opacity 0.2s linear;
 }
@@ -172,7 +190,7 @@ Hamburger menu button stijl
 .line {
   fill:none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke:black;
+  stroke:var(--textcolor);
   stroke-width:5;
   stroke-linecap:round;
 }
@@ -236,6 +254,7 @@ Homepage slider van producten
   font-size: 1.5em;
   font-style: italic;
   font-weight: bold;
+  color: var(--textcolor);
 }
 
 .bodyHome section ul li p{
@@ -267,7 +286,8 @@ Homepage content blokken
   font-size: 3em;
   font-weight: bold;
   text-align: center;
-  color: yellow;
+  color: var(--navcolor);
+  background-color: var(--backgroundcolordark);
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
@@ -294,7 +314,7 @@ Homepage content blokken hover/active
   transition: 0.1s ease-in-out;
 
   text-shadow: #474747 3px 5px 2px, 2px 2px 2px rgba(206,89,55,0);
-  color: #FEFE00;
+  color: var(--navcolor);
  }
 
  .bodyHome main section ol li h2:active {
@@ -440,7 +460,7 @@ Tech pagina the shape afbeeldingen grootte wissel
 
   font-weight: bold;
   font-size: 4em;
-  color: var(--hcolor)
+  color: var(--hcolor);
 }
 
 /********************************
@@ -551,6 +571,18 @@ footer section div ul li a {
   align-content: center;
 }
 
+footer section div ul li a:hover {
+  color: rgb(0, 17, 255);
+  text-align: left;
+  align-content: center;
+}
+
+footer section div ul li a:active {
+  color: rgb(0, 119, 255);
+  text-align: left;
+  align-content: center;
+}
+
 footer section div p {
   text-align: center;
 }
@@ -561,26 +593,37 @@ footer section div svg {
   flex-wrap: wrap;
   width: 2em;
   height: 2em;
-
-  transition: 1s;
 }
 
-footer section div svg .instaIcon {
-  background-color: yellow;
-  width: 3em;
-  height: 3em;
-
-  transition: 0.5s;
+footer section div img {
+  display: block;
+  margin: auto;
 }
 
-footer section div svg:hover {
-width: 3.2em;
-height: 3.2em;
-}
 
 /********************************
 Footer op beide pagina's eind
 ********************************/
+
+/********************************
+Animatie(s)
+********************************/
+
+
+@keyframes instagroei {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+.instaIcon:hover {
+  animation-name: instagroei;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+}
 
 
 /********************************
