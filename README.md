@@ -185,11 +185,11 @@ Afbeeldingen met (odd) werken nu wel bij mij
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik kon niet veel laten zien aan Vasilis in ons eerste gesprek. Mijn upload naar Github werkte niet en hij kon dus niks beoordelen. In een tweede gesprek zijn we nog naar mijn site wezen kijken en heb ik er daarna aan gewerkt. Ik heb extra onderdelen toegevoegd en wat onderdelen verbeterd.
 
 ### Screenshot(s)
 
-hier screenshot(s) van je eindresultaat
+<img src="images/Screenshot 2022-01-24 at 22.12.48">
 
 </details>
 
@@ -202,7 +202,6 @@ hier screenshot(s) van je eindresultaat
 <details open>
 <summary>continu bijhouden terwijl je werkt</summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
 1. hamburger menu https://codepen.io/shetty-tejas/pen/gORPZdy
 2. hamburger menu animatie https://www.sliderrevolution.com/resources/css-hamburger-menu/ (specifiek: https://codepen.io/ainalem/pen/LJYRxz)
