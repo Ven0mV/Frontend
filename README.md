@@ -189,7 +189,9 @@ Ik kon niet veel laten zien aan Vasilis in ons eerste gesprek. Mijn upload naar 
 
 ### Screenshot(s)
 
-<img src="images/Screenshot 2022-01-24 at 22.12.48">
+<img src="images/Screenshot1.png "width="375px" alt="screenshot1">
+<img src="images/Screenshot2.png "width="375px" alt="screenshot2">
+<img src="images/Screenshot3.png "width="375px" alt="screenshot3">
 
 </details>
 
