@@ -1,0 +1,691 @@
+/* CSS Document */
+/************
+algemeen 
+************/
+
+*, *::after, *::before {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 375px;
+}
+
+:root {
+  --hcolor: black;
+  --textcolor: black;
+  --footercolor: grey;
+  --mainfont: Arial, Helvetica, sans-serif;
+  --backgroundcolor: white;
+  --navcolor: yellow;
+  --altbcolor1: rgb(237, 235, 226);
+  --altbcolor2: rgb(216, 214, 204);
+  --altbcolor3: rgb(237, 234, 225);
+  --altbcolor4: rgb(237, 235, 228);
+}
+
+@media (prefers-color-scheme : dark ) {
+  :root {
+    --hcolor: rgb(211, 211, 211);
+    --textcolor: rgb(187, 187, 187);
+    --footercolor: #313e50;
+    --mainfont: Arial, Helvetica, sans-serif;
+    --backgroundcolor: #0a2941;
+    --backgroundcolordark: rgba(237, 235, 226, 0.50);
+    --navcolor: #141E61;
+    --altbcolor1: #0f283b;
+    --altbcolor2: #082032;
+    --altbcolor3: #061825;
+    --altbcolor4: #071927;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--backgroundcolor);
+}
+
+body {
+  margin:0;
+  padding-left:0;
+  font-family: var(--mainfont);
+}
+
+header {
+  background-color: var(--navcolor);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+div video {
+  width: auto;
+}
+
+p {
+  line-height: 1.5em;
+  padding: 0.5em 1em 0.5em 1em;
+  color: var(--textcolor);
+}
+
+
+/********************************
+Hamburger menu 
+********************************/
+
+
+.nav {
+  width: 100%;
+  background-color:var(--navcolor);;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logo,
+#hamburger {
+  margin: 0em 0em 0em 2em;
+  font-family: var(--mainfont);
+  color: var(--hcolor);
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+#hamburger {
+  cursor: pointer;
+  transition: opacity 0.25s linear;
+  display: flex;
+  align-items: center;
+}
+
+#hamburger div:before,
+#hamburger div:after {
+  content: "";
+  position: absolute;
+}
+
+#hamburger div:before {
+  transform: translateY(-200%);
+}
+
+#hamburger div:after {
+  transform: translateY(200%);
+}
+
+#hamburger.open div {
+  background: transparent;
+}
+
+#hamburger.open div:before {
+  transform: rotate(45deg);
+}
+
+#hamburger.open div:after {
+  transform: rotate(-45deg);
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--navcolor);
+  z-index: 2;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#overlay.menu {
+  transform: translateY(0%);
+}
+
+#overlay a {
+  margin: 1em;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--textcolor);
+  font-size: 2em;
+  transition: opacity 0.2s linear;
+}
+
+#overlay a:active {
+  color: blue;
+  transition: opacity 0.2s ease-in;
+}
+/********************************
+Hamburger menu eind
+********************************/
+
+/********************************
+Hamburger menu button stijl
+********************************/
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:var(--textcolor);
+  stroke-width:5;
+  stroke-linecap:round;
+}
+
+.ham3 .top {
+  stroke-dasharray: 40 130;
+}
+.ham3 .middle {
+  stroke-dasharray: 40 140;
+}
+.ham3 .bottom {
+  stroke-dasharray: 40 205;
+}
+.ham3.active .top {
+  stroke-dasharray: 75 130;
+  stroke-dashoffset: -63px;
+}
+.ham3.active .middle {
+  stroke-dashoffset: -102px;
+}
+.ham3.active .bottom {
+  stroke-dasharray: 110 205;
+  stroke-dashoffset: -86px;
+}
+
+/********************************
+Hamburger menu button stijl eind
+********************************/
+
+/**************
+Homepage begin
+**************/
+
+/********************************
+Homepage video.mp4 'banner'
+********************************/
+.bodyHome main section:first-of-type{
+  height: 375px;
+}
+
+/********************************
+Homepage slider van producten
+********************************/
+.bodyHome main section:nth-of-type(2) ul{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior:none;
+}
+
+.bodyHome main section ul:first-of-type li{
+  flex-shrink: 0;
+  align-items:center;
+  scroll-snap-align: center;
+}
+
+.bodyHome section ul li h3{
+  padding-left: 1em;
+  padding-top: 0.5em;
+
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--textcolor);
+}
+
+.bodyHome section ul li p{
+  padding-left: 1.5em;
+  padding-bottom: 1em;
+
+  font-size: 1em;
+  font-style: italic;
+}
+
+/********************************
+Homepage content blokken
+********************************/
+
+.bodyHome main section ol li {
+  position:relative;
+  width: 375px;
+  height: 375px;
+  z-index: 0;
+}
+
+.bodyHome main section ol li h2 {
+  position:absolute;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  left:1em; right:1em; top:1em; bottom:1em;
+
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  color: var(--navcolor);
+  background-color: var(--backgroundcolordark);
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.bodyHome main section ol li img {
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+}
+
+/********************************
+Homepage content blokken eind
+********************************/
+
+/*************************************
+Homepage content blokken hover/active
+*************************************/
+
+.bodyHome main section ol li h2:hover {
+  position:absolute;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  left:1em; right:1em; top:1.1em; bottom:1em;
+  transition: 0.1s ease-in-out;
+
+  text-shadow: #474747 3px 5px 2px, 2px 2px 2px rgba(206,89,55,0);
+  color: var(--navcolor);
+ }
+
+ .bodyHome main section ol li h2:active {
+  position:absolute;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  left:1em; right:1em; top:1.1em; bottom:1em;
+  transition: 0.1s ease-in-out;
+
+  text-shadow: #474747 3px 5px 2px, 2px 2px 2px rgba(206,89,55,0);
+  color: blue;
+ }
+
+/********************************
+Homepage eind
+********************************/
+
+
+/********************************
+Begin tech pagina
+********************************/
+
+.bodyTech main section div {
+  padding: 2em 0em 0em 0em;
+}
+
+.bodyTech main section h1 {
+  position: absolute;
+  inline-size: 4em;
+  overflow-wrap: break-word;
+  padding-left: 0.3em;
+  z-index: -1;
+
+  font-weight: bold;
+  font-size: 4em;
+  color: var(--hcolor);
+}
+
+.bodyTech main section div:nth-of-type(2) img {
+  position: absolute;
+  min-width: 375px;
+  z-index: 0;
+}
+
+.bodyTech main section h2 {
+  inline-size: 6em;
+  padding: 1em 0em 0em 0.5em;
+  overflow-wrap: break-word;
+
+  font-weight: bold;
+  font-size: 2em;
+  color: var(--hcolor);
+}
+
+.bodyTech main section div iframe {
+  position:relative;
+  width: 375px;
+  height: 250px;
+}
+
+/********************************
+Begin tech pagina eind
+********************************/
+
+/********************************
+Tech pagina the idea
+********************************/
+
+.bodyTech main section:nth-of-type(2) {
+  padding: 0em 0em 1.5em 0em;
+  background-color: var(--altbcolor2);
+}
+
+.bodyTech main section:nth-of-type(2) img {
+  max-width: 375px;
+}
+
+/********************************
+Tech pagina the idea eind
+********************************/
+
+/********************************
+Tech pagina the shape
+********************************/
+
+.bodyTech main section h2 {
+  padding: 1em 0em 0.3em 0.5em;
+
+  font-weight: bold;
+  font-size: 3em;
+  color: var(--hcolor)
+}
+
+.bodyTech main section ul li {
+  position: relative;
+}
+
+.bodyTech main section ul li h3 {
+  padding: 1.5em 0.5em 0.3em 0.5em;
+  text-align: center;
+  
+  font-weight: bold;
+  font-size: 4em;
+  color: var(--hcolor);
+}
+
+/*************************************************
+Tech pagina the shape afbeeldingen grootte wissel
+*************************************************/
+
+.bodyTech main section ul li img:nth-of-type(odd) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.bodyTech main section ul li img:nth-of-type(even) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 0em 0em 0em;
+  width: 20%;
+}
+
+.bodyTech main section ul li h4 {
+  padding: 1.5em 0.5em 0.3em 0.7em;
+  text-align: left;
+  
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--hcolor)
+}
+
+.bodyTech main section:nth-of-type(3) {
+  padding: 0em 0em 3.5em 0em;
+  background-color: var(--altbcolor1);
+}
+
+.bodyTech main section:nth-of-type(3) ul li h3 {
+  padding: 1em 0em 0.3em 0em;
+
+  font-weight: bold;
+  font-size: 4em;
+  color: var(--hcolor);
+}
+
+/********************************
+Tech pagina the shape eind
+********************************/
+
+/********************************
+Tech pagina terrain shapes
+********************************/
+
+.bodyTech main section:nth-of-type(4) {
+  background-color: var(--altbcolor2);
+}
+
+.bodyTech main section:nth-of-type(4) ul li h3 {
+  padding: 1em 0em 0.3em 0em;
+
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--hcolor)
+}
+
+.bodyTech main section:nth-of-type(4) ul li img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20.9em;
+}
+
+.bodyTech main section:nth-of-type(4) ul li p {
+padding: 1.5em 1em 1.5em 1em;
+text-align: center;
+}
+
+.bodyTech main section:nth-of-type(4) div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3em;
+}
+
+/********************************
+Tech pagina terrain shapes eind
+********************************/
+
+/********************************
+Tech pagina 'buttons' hover/active
+********************************/
+
+.bodyTech main section:nth-of-type(4) ul li div a {
+padding: 1em 2em 1em 2em;
+border: 4px solid #002AFF;
+border-radius: 0px 23px 23px 23px;
+color: white;
+background-color: #002AFF;
+transition: 0.3s ease-in;
+}
+
+.bodyTech main section:nth-of-type(4) ul li div a:hover {
+  padding: 1em 2em 1em 2em;
+  border: 4px solid #ff3c00;
+  border-radius: 23px 23px 0px 23px;
+  color: white;
+  background-color: #ff3c00;
+  transition: 0.3s ease-out;
+  }
+
+.bodyTech main section:nth-of-type(4) ul li div a:active {
+  padding: 1em 2em 0.5em 2em;
+  border: 8px solid #ff3c00;
+  border-radius: 23px 23px 0px 23px;
+  color: white;
+  background-color: #ff3c00b0;
+  transition: 0.2s;
+  }
+
+/********************************
+Tech pagina 'buttons' hover/active eind
+********************************/
+
+
+
+/********************************
+Footer op beide pagina's
+********************************/
+
+footer section h3 {
+  padding: 2em 0em 1em 1em;
+  font-weight: bold;
+  color: grey;
+}
+
+footer p {
+  padding-left: 1em;
+  padding-right: 1em;
+  color: grey;
+  text-align: left;
+}
+
+footer div {
+  padding: 1em 1em 1em 1em;
+}
+
+footer section div ul li a {
+  color: grey;
+  text-align: left;
+  align-content: center;
+}
+
+footer section div ul li a:hover {
+  color: rgb(0, 17, 255);
+  text-align: left;
+  align-content: center;
+}
+
+footer section div ul li a:active {
+  color: rgb(0, 119, 255);
+  text-align: left;
+  align-content: center;
+}
+
+footer section div p {
+  text-align: center;
+}
+
+footer section div svg {
+  display: block;
+  margin: auto;
+  flex-wrap: wrap;
+  width: 2em;
+  height: 2em;
+}
+
+footer section div img {
+  display: block;
+  margin: auto;
+}
+
+
+/********************************
+Footer op beide pagina's eind
+********************************/
+
+/********************************
+Animatie(s)
+********************************/
+
+
+@keyframes instagroei {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+.instaIcon:hover {
+  animation-name: instagroei;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+}
+
+
+/********************************
+Classes homepage onderwerpen
+********************************/
+
+#men-snowboard {
+  background-color: #B0C4DE;
+}
+
+#woman-snowboard {
+  background-color: hotpink;
+}
+
+#shapes {
+  background-color: powderblue;
+}
+
+#bindings {
+  background-color: papayawhip;
+}
+
+#apparel {
+  background-color: cadetblue;
+}
+
+#travel {
+  background-color: lightsteelblue;
+}
+
+#woman-snowboard img {
+  top: 17.2%;
+}
+
+
+/**********************
+Bronnen
+
+Hamburger menu https://codepen.io/shetty-tejas/pen/gORPZdy
+hamburger menu animatie https://www.sliderrevolution.com/resources/
+css-hamburger-menu/ (specifiek: https://codepen.io/ainalem/pen/LJYRxz)
+styling ideëen https://html-css-js.com/css/generator/box-shadow/
+Opdrachten les https://codepen.io/shooft/pen/vYZKQPX?editors=1100
+https://codepen.io/shooft/pen/GREjemg
+
+
+**********************/
+
+
+/*****
+extra
+*****/
+#playsong {
+  display: block;
+  max-width: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+  #audio {
+    display: block;
+    max-width: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
